@@ -7,11 +7,11 @@ import java.util.Scanner;
 //A = Rock
 //B = Paper
 //C = Scissors
-//X = Rock
-//Y = Paper
-//Z = Scissors
+//X = Rock 1 point
+//Y = Paper 2 point
+//Z = Scissors 3 point
 
-public class Part1 {
+public class Part2 {
     public static void main(String[] args) throws FileNotFoundException {
         File file = new File("src/Day2/input.txt");
         Scanner sc = new Scanner(file);
@@ -20,29 +20,29 @@ public class Part1 {
         while (sc.hasNext()) {
             String[] chars = sc.nextLine().split(" ");
 
-            if ((chars[0].equals("A") && chars[1].equals("Y")) || (chars[0].equals("B") && chars[1].equals("Z")) || (chars[0].equals("C") && chars[1].equals("X"))) {
-                if (chars[1].equals("X")) {
-                    result += 7;
-                } else if (chars[1].equals("Y")) {
+            if (chars[1].equals("Z")) {
+                if (chars[0].equals("A")) {
                     result += 8;
-                } else {
+                } else if (chars[0].equals("B")) {
                     result += 9;
+                } else {
+                    result += 7;
                 }
-            } else if ((chars[0].equals("A") && chars[1].equals("X")) || (chars[0].equals("B") && chars[1].equals("Y")) || (chars[0].equals("C") && chars[1].equals("Z"))) {
-                if (chars[1].equals("X")) {
+            } else if (chars[1].equals("Y")) {
+                if (chars[0].equals("A")) {
                     result += 4;
-                } else if (chars[1].equals("Y")) {
+                } else if (chars[0].equals("B")) {
                     result += 5;
                 } else {
                     result += 6;
                 }
             } else {
-                if (chars[1].equals("X")) {
-                    result += 1;
-                } else if (chars[1].equals("Y")) {
-                    result += 2;
-                } else {
+                if (chars[0].equals("A")) {
                     result += 3;
+                } else if (chars[0].equals("B")) {
+                    result += 1;
+                } else {
+                    result += 2;
                 }
             }
         }
