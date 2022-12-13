@@ -7,9 +7,9 @@ import java.util.Scanner;
 //A = Rock
 //B = Paper
 //C = Scissors
-//X = Rock
-//Y = Paper
-//Z = Scissors
+//X = Rock 1 point
+//Y = Paper 2 points
+//Z = Scissors 3 points
 
 public class Part1 {
     public static void main(String[] args) throws FileNotFoundException {

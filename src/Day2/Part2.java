@@ -8,8 +8,8 @@ import java.util.Scanner;
 //B = Paper
 //C = Scissors
 //X = Rock 1 point
-//Y = Paper 2 point
-//Z = Scissors 3 point
+//Y = Paper 2 points
+//Z = Scissors 3 points
 
 public class Part2 {
     public static void main(String[] args) throws FileNotFoundException {
