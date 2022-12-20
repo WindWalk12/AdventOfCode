@@ -1,4 +1,4 @@
-package Day2;
+package AoC22.Day2;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class Part1 {
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("src/Day2/input.txt");
+        File file = new File("src/AoC22/Day2/input.txt");
         Scanner sc = new Scanner(file);
         int result = 0;
 
