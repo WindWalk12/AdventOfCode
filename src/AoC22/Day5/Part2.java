@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Part1 {
+public class Part2 {
     public static void main(String[] args) throws FileNotFoundException {
         File file = new File("src/AoC22/Day5/input.txt");
         Scanner sc = new Scanner(file);
@@ -87,10 +87,22 @@ public class Part1 {
             int moves = Integer.parseInt(strings[1]);
             int fromSpace = Integer.parseInt(strings[3]) - 1;
             int toSpace = Integer.parseInt(strings[5]) - 1;
-            for (int i = 0; i < moves; i++) {
+            if (moves == 1) {
                 char crate = spaces[fromSpace].peek();
                 spaces[fromSpace].pop();
                 spaces[toSpace].push(crate);
+            } else {
+                Stack<Character> crane = new Stack<>();
+                for (int i = 0; i < moves; i++) {
+                    char crate = spaces[fromSpace].peek();
+                    spaces[fromSpace].pop();
+                    crane.push(crate);
+                }
+                for (int i = 0; i < moves; i++) {
+                    char crate = crane.peek();
+                    crane.pop();
+                    spaces[toSpace].push(crate);
+                }
             }
         }
 
