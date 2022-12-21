@@ -9,7 +9,7 @@ public class Part1 {
     public static void main(String[] args) throws FileNotFoundException {
         File file = new File("src/AoC22/Day5/input.txt");
         Scanner sc = new Scanner(file);
-        StringBuilder result = new StringBuilder("");
+        StringBuilder result = new StringBuilder();
         Stack<Character>[] spaces = new Stack[9];
         for (int i = 0; i < spaces.length; i++) {
             spaces[i] = new Stack<>();
